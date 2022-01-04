@@ -3,6 +3,7 @@ import io.gitlab.arturbosch.detekt.Detekt
 plugins {
     jacoco
     kotlin("jvm") version "1.6.10"
+    kotlin("plugin.serialization") version "1.6.10"
     id("io.gitlab.arturbosch.detekt") version "1.19.0"
     id("org.jmailen.kotlinter") version "3.8.0"
 }
@@ -25,6 +26,7 @@ kotlinter {
 dependencies {
     implementation(kotlin("stdlib"))
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
     testImplementation("io.kotest:kotest-assertions-core:5.0.3")
     testImplementation("io.kotest:kotest-runner-junit5:5.0.3")
     testImplementation("io.mockk:mockk:1.12.1")
