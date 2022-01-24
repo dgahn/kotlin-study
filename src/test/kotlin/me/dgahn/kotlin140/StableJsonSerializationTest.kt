@@ -22,7 +22,7 @@ class StableJsonSerializationTest : FunSpec({
     }
 
     test("Json으로 직렬화할 수 있다.") {
-        val totalList = listOf(1_000_000, 40_000, 1)
+        val totalList = listOf(1_000_000, 40_000, 100, 1)
         totalList.forEach { total ->
             println("total : $total")
             val dataList = (1..total).map {
